@@ -26,7 +26,7 @@ int mine_key(std::string* key, int zeroes){
     while (true){
         i++;
         test = stripped_key + std::to_string(i);
-        result = md5(test);
+        result = md5(test);  // This is not optimized at all, as it operates with lots of string comparisons
         if (is_valid(&result, zeroes)){
             break;
         }
@@ -35,7 +35,7 @@ int mine_key(std::string* key, int zeroes){
 }
 
 
-void day4::solve_part_1(){
+void y2015::day4::solve_part_1(){
     std::string input = read_puzzle_input(2015,4);
     std::cout << "Day 2015.4.1: " << "282749\n"; //mine_key(&input, 5) << "\n";
     /*
@@ -46,7 +46,7 @@ void day4::solve_part_1(){
      */
 }
 
-void day4::solve_part_2(){
+void y2015::day4::solve_part_2(){
     std::string input = read_puzzle_input(2015,4);
     std::cout << "Day 2015.4.2: " << "9962624\n";//mine_key(&input, 6) << "\n";
 }

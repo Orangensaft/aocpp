@@ -4,7 +4,7 @@
 
 #ifndef ADVENT_OF_CODE_DAY1_H
 #define ADVENT_OF_CODE_DAY1_H
-namespace day1{
+namespace y2015::day1{
     void solve_part_1();
     void solve_part_2();
 }

@@ -68,7 +68,7 @@ int calculate_paper(Parcel* p){
 }
 
 
-void day2::solve_part_1(){
+void y2015::day2::solve_part_1(){
     std::string input = read_puzzle_input(2015,2);
     std::string current;
     int total_paper = 0;
@@ -101,6 +101,6 @@ void day2::solve_part_1(){
     //std::cout << "Paper: " << paper << "\n";
 }
 
-void day2::solve_part_2(){
+void y2015::day2::solve_part_2(){
 
 }

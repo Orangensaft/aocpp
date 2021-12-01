@@ -36,7 +36,7 @@ std::string pos_to_string(Coord* c){
     return out;
 }
 
-void day3::solve_part_1(){
+void y2015::day3::solve_part_1(){
     std::string input = read_puzzle_input(2015,3);
     std::map<std::string, int> visited;
     Coord pos;
@@ -51,7 +51,7 @@ void day3::solve_part_1(){
     std::cout << "Day 2015.3.1: " << total << "\n";
 }
 
-void day3::solve_part_2(){
+void y2015::day3::solve_part_2(){
     std::string input = read_puzzle_input(2015, 3);
     std::map<std::string, int> visited;
     Coord santa;
