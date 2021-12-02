@@ -84,6 +84,12 @@ std::string read_puzzle_input(int year, int day) {
 }
 
 
+std::vector<std::string> read_puzzle_input_as_lines(int year, int day){
+    std::string input = read_puzzle_input(year, day);
+    return split(input, '\n');
+}
+
+
 int max_int(int a, int b, int c){
     if (a > b){
         if (a>c){

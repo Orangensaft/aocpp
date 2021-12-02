@@ -46,8 +46,7 @@ void update_position_v2(string *line, position *p){
 
 
 void y2021::day2::solve_part_1() {
-    string inputs = read_puzzle_input(2021,2);
-    vector<string> lines = split(inputs, '\n');
+    vector<string> lines = read_puzzle_input_as_lines(2021, 2);
     position p;
     p.horizontal = 0;
     p.depth = 0;
@@ -58,8 +57,7 @@ void y2021::day2::solve_part_1() {
 }
 
 void y2021::day2::solve_part_2() {
-    string inputs = read_puzzle_input(2021,2);
-    vector<string> lines = split(inputs, '\n');
+    vector<string> lines = read_puzzle_input_as_lines(2021, 2);
     position p;
     p.horizontal = 0;
     p.depth = 0;

@@ -6,6 +6,7 @@
 #define ADVENT_OF_CODE_UTILS_H
 #include <vector>
 std::string read_puzzle_input(int year, int day);
+std::vector<std::string> read_puzzle_input_as_lines(int year, int day);
 std::string strip(const std::string& in);
 std::vector<std::string> split(const std::string& strData, char delimiter);
 std::vector<int> map_to_int(std::vector<std::string>& string_vector);
