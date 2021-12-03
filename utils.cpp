@@ -1,14 +1,13 @@
 //
 // Created by NicolasMeisberger on 22.11.2021.
 //
+#include <bitset>
 #include <iostream>
 #include <sstream>
 #include <vector>
 #include <fstream>
 #include <string>
 #include <algorithm>
-#include <functional>
-#include <locale>
 
 #include "utils.h"
 
@@ -120,4 +119,25 @@ int min_int(int a, int b, int c){
             return c;
         }
     }
+}
+
+std::string fmt_list(std::vector<std::string> *v){
+    std::string o;
+    for (std::string s: *v){
+        o+=s + ", ";
+    }
+    return o;
+}
+
+int bin_to_int(std::string *bin){
+    int len = (int)bin->size();
+    int out = 0;
+    int shiftvalue;
+    for (int i=0; i<len; i++){
+        shiftvalue = (len-i)-1;
+        if (bin->at(i)=='1') {
+            out |= (1 << shiftvalue);
+        }
+    }
+    return out;
 }
