@@ -8,6 +8,7 @@
 #include <string>
 std::string read_puzzle_input(int year, int day);
 int bin_to_int(std::string *bin);
+int signum(int i);
 std::string fmt_list(std::vector<std::string> *v);
 std::string fmt_list(std::vector<int> *v);
 std::vector<std::string> read_puzzle_input_as_lines(int year, int day);

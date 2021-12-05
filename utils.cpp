@@ -11,6 +11,14 @@
 
 #include "utils.h"
 
+int signum(int i){
+    if (i>0)
+        return 1;
+    if (i<0)
+        return -1;
+    return 0;
+}
+
 std::string strip(const std::string& in) {
     // Removes ALL special chars
     char final[2000];
