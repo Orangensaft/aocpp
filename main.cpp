@@ -6,6 +6,7 @@
 #include "2015/day5.h"
 #include "2021/day2.h"
 #include "2021/day3.h"
+#include "2021/day4.h"
 
 void year2015(){
     y2015::day1::solve_part_1();
@@ -27,6 +28,8 @@ void year2021(){
     y2021::day2::solve_part_2();
     y2021::day3::solve_part_1();
     y2021::day3::solve_part_2();
+    y2021::day4::solve_part_1();
+    y2021::day4::solve_part_2();
 }
 
 int main() {

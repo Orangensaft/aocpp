@@ -129,6 +129,14 @@ std::string fmt_list(std::vector<std::string> *v){
     return o;
 }
 
+std::string fmt_list(std::vector<int> * v){
+    std::string o;
+    for (int i: *v){
+        o+= std::to_string(i)+", ";
+    }
+    return o;
+}
+
 int bin_to_int(std::string *bin){
     int len = (int)bin->size();
     int out = 0;

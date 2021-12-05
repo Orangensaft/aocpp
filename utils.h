@@ -9,6 +9,7 @@
 std::string read_puzzle_input(int year, int day);
 int bin_to_int(std::string *bin);
 std::string fmt_list(std::vector<std::string> *v);
+std::string fmt_list(std::vector<int> *v);
 std::vector<std::string> read_puzzle_input_as_lines(int year, int day);
 std::string strip(const std::string& in);
 std::vector<std::string> split(const std::string& strData, char delimiter);
