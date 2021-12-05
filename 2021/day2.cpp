@@ -18,7 +18,7 @@ struct position{
 
 
 void update_position(string *line, position *p){
-    vector<string> parts = split(*line, ' ');
+    vector<string> parts = split_old(*line, ' ');
     string cmd = parts.at(0);
     int value = atoi(parts.at(1).c_str());
     if (cmd == "forward")
@@ -31,7 +31,7 @@ void update_position(string *line, position *p){
 
 
 void update_position_v2(string *line, position *p){
-    vector<string> parts = split(*line, ' ');
+    vector<string> parts = split_old(*line, ' ');
     string cmd = parts.at(0);
     int value = atoi(parts.at(1).c_str());
     if (cmd == "down")

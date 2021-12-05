@@ -24,7 +24,7 @@ int get_increases(vector<int> *depths){
 
 vector<int> get_depths(){
     string input = read_puzzle_input(2021,1);
-    vector<string> splitted = split(input, '\n');
+    vector<string> splitted = split_old(input, '\n');
     vector<int> depths = map_to_int(splitted);
     return depths;
 }

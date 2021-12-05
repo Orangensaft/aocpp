@@ -100,7 +100,7 @@ bool is_really_nice(string *s){
 
 void y2015::day5::solve_part_1(){
     std::string input = read_puzzle_input(2015,5);
-    std::vector<std::string> strings = split(input, '\n');
+    std::vector<std::string> strings = split_old(input, '\n');
     int total = 0;
     for (string s: strings){
         if (is_nice(&s))
@@ -111,7 +111,7 @@ void y2015::day5::solve_part_1(){
 
 void y2015::day5::solve_part_2(){
     string input = read_puzzle_input(2015,5);
-    vector<string> strings = split(input, '\n');
+    vector<string> strings = split_old(input, '\n');
     int total = 0;
     for (string s: strings){
         if (is_really_nice(&s))

@@ -133,7 +133,7 @@ bingo create_bingo(vector<string> *lines){
     string curstring;
     for (int y=0; y<lines->size(); y++){
         curstring = lines->at(y);
-        curline = split_v2(&curstring,' ',true);
+        curline = split(&curstring, ' ', true);
         bingoline = map_to_int(curline);
         b.set_line(&bingoline,y);
     }
@@ -164,12 +164,12 @@ vector<bingo> create_bingos(vector<string> *lines){
 
 void y2021::day4::solve_part_1() {
     string content = read_puzzle_input(2021,4);
-    auto lines = split_v2(&content,'\n',true);
+    auto lines = split(&content, '\n', true);
     vector<string> calls_str;
     vector<string> bingolines;
     for (int i=0; i<lines.size(); i++){
         if (i==0){
-            calls_str = split_v2(&lines.at(i),',',true);
+            calls_str = split(&lines.at(i), ',', true);
         }else{
             bingolines.push_back(lines.at(i));
         }
@@ -211,12 +211,12 @@ void y2021::day4::solve_part_1() {
 void y2021::day4::solve_part_2() {
     // copy paste i know. Meh.
     string content = read_puzzle_input(2021,4);
-    auto lines = split_v2(&content,'\n',true);
+    auto lines = split(&content, '\n', true);
     vector<string> calls_str;
     vector<string> bingolines;
     for (int i=0; i<lines.size(); i++){
         if (i==0){
-            calls_str = split_v2(&lines.at(i),',',true);
+            calls_str = split(&lines.at(i), ',', true);
         }else{
             bingolines.push_back(lines.at(i));
         }

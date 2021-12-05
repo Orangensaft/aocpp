@@ -27,7 +27,7 @@ std::string strip(const std::string& in) {
     return final;
 }
 
-std::vector<std::string> split_v2(std::string *s, char delimiter, bool skip){
+std::vector<std::string> split(std::string *s, char delimiter, bool skip){
     /**
      * Splits given string into an vector of strings by given delimiter
      * if skip is true, then empty substrings will be skipped
@@ -52,8 +52,8 @@ std::vector<std::string> split_v2(std::string *s, char delimiter, bool skip){
     return lines;
 }
 
-
-std::vector<std::string> split(const std::string& strData, char delimiter)
+//deprecated
+std::vector<std::string> split_old(const std::string& strData, char delimiter)
 {;
     //Define contant data that will be worked as delimiter
     //Define the dynamic array variable of strings
@@ -62,7 +62,7 @@ std::vector<std::string> split(const std::string& strData, char delimiter)
     std::stringstream streamData(strData);
     /*
     Declare string variable that will be used
-    to store data after split
+    to store data after split_old
     */
     std::string val;
     /*
@@ -111,7 +111,7 @@ std::string read_puzzle_input(int year, int day) {
 
 std::vector<std::string> read_puzzle_input_as_lines(int year, int day){
     std::string input = read_puzzle_input(year, day);
-    return split(input, '\n');
+    return split_old(input, '\n');
 }
 
 
