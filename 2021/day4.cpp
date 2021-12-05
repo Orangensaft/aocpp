@@ -125,27 +125,6 @@ struct bingo{
 
 };
 
-
-vector<string> split_v2(string *s, char delimiter='\n', bool skip=false){
-    vector<string> lines;
-    string cur;
-    for (char c: *s){
-        if (c==delimiter){
-            if (skip and cur.empty())
-                continue;
-            lines.push_back(cur);
-            cur = "";
-            continue;
-        }
-        cur += c;
-    }
-    if (!cur.empty()){
-        lines.push_back(cur);
-    }
-    return lines;
-}
-
-
 bingo create_bingo(vector<string> *lines){
     bingo b{};
     b.init();
@@ -181,21 +160,6 @@ vector<bingo> create_bingos(vector<string> *lines){
     }
     return out;
 }
-
-string strip_left(string *s){
-    string out = "";
-    // from start
-    char cur;
-    for (int i=0; i<s->size(); i++){
-        cur = s->at(i);
-        if (out.empty() && cur == ' ')
-            continue;
-        out += cur;
-    }
-    return out;
-}
-
-
 
 
 void y2021::day4::solve_part_1() {

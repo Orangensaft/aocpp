@@ -27,6 +27,32 @@ std::string strip(const std::string& in) {
     return final;
 }
 
+std::vector<std::string> split_v2(std::string *s, char delimiter, bool skip){
+    /**
+     * Splits given string into an vector of strings by given delimiter
+     * if skip is true, then empty substrings will be skipped
+     * "1,2,,3,4" will result in {"1", "2", "", "3", "4"} when skip is false
+     * otherwise {"1","2","3","4"} will be the result.
+     */
+    std::vector<std::string> lines;
+    std::string cur;
+    for (char c: *s){
+        if (c==delimiter){
+            if (skip and cur.empty())
+                continue;
+            lines.push_back(cur);
+            cur = "";
+            continue;
+        }
+        cur += c;
+    }
+    if (!cur.empty()){
+        lines.push_back(cur);
+    }
+    return lines;
+}
+
+
 std::vector<std::string> split(const std::string& strData, char delimiter)
 {;
     //Define contant data that will be worked as delimiter
