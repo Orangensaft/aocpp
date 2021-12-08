@@ -205,4 +205,3 @@ void y2021::day8::solve_part_2() {
     cout << "Day 2021.8.2: " << total << endl;
 
 }
-
