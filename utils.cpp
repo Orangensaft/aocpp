@@ -163,6 +163,15 @@ std::string fmt_list(std::vector<std::string> *v){
     return o;
 }
 
+int min_elem(std::vector<int> &v){
+    int out = INT_MAX;
+    for (int i: v){
+        if (i<=out)
+            out=i;
+    }
+    return out;
+}
+
 std::string fmt_list(std::vector<int> * v){
     std::string o;
     for (int i: *v){
