@@ -192,3 +192,7 @@ int bin_to_int(std::string *bin){
     }
     return out;
 }
+
+void print_solution(int year, int day, int step, int solution){
+    std::cout << "Day "<< year <<"." << day << "." << step << ": " << solution << std::endl;
+}

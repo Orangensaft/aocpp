@@ -18,7 +18,7 @@ std::vector<std::string> split(std::string *s, char delimiter='\n', bool skip=fa
 std::vector<int> map_to_int(std::vector<std::string>& string_vector);
 int max_int(int a, int b, int c);
 int min_int(int a, int b, int c);
-
+void print_solution(int year, int day, int part, int solution);
 int min_elem(std::vector<int> &v);
 
 #endif //ADVENT_OF_CODE_UTILS_H
