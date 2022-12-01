@@ -78,7 +78,8 @@ std::vector<std::string> split_old(const std::string& strData, char delimiter)
     insert the data into the array
     */
     while (std::getline(streamData, val, delimiter)) {
-        if ((int)val.at(0) == -1){
+
+        if (!val.empty() && (int)val.at(0) == -1){
             continue;
         }
         outputArray.push_back(val);
@@ -171,6 +172,16 @@ int min_elem(std::vector<int> &v){
     }
     return out;
 }
+
+int max_elem_long(std::vector<long> &v){
+    int out = LONG_MIN;
+    for (int i: v){
+        if (i>=out)
+            out=i;
+    }
+    return out;
+}
+
 
 std::string fmt_list(std::vector<int> * v){
     std::string o;

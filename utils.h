@@ -20,5 +20,7 @@ int max_int(int a, int b, int c);
 int min_int(int a, int b, int c);
 void print_solution(int year, int day, int part, int solution);
 int min_elem(std::vector<int> &v);
+int max_elem_long(std::vector<long> &v);
+
 
 #endif //ADVENT_OF_CODE_UTILS_H
