@@ -13,6 +13,7 @@
 #include "2021/day7.h"
 #include "2021/day8.h"
 #include "2021/day9.h"
+#include "2015/day7.h"
 
 void year2015(){
     y2015::day1::solve_part_1();
@@ -27,6 +28,8 @@ void year2015(){
     y2015::day5::solve_part_2();
     y2015::day6::solve_part_1();
     y2015::day6::solve_part_2();
+    //y2015::day7::solve_part_1();
+    //y2015::day7::solve_part_2();
 }
 
 void year2021(){
